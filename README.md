@@ -1,4 +1,4 @@
-## Data Mining the NASA Social Media Pages
+## The Project
 
 For the project, we will use Python code in order to access the Twitter and Instagram API's to collect the data that we need. We will be looking at the NASA pages and figure out which posts are more popular amongst people by looking at what receives the most likes, comments, and retweets.
 
