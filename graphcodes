@@ -1,0 +1,75 @@
+import matplotlib.pyplot as plt; plt.rcdefaults()
+import numpy as np
+import matplotlib.pyplot as plt
+
+objects = ('Black Holes', 'Constellations', 'Aliens', 'Solar Eclipse')
+y_pos = np.arange(len(objects))
+amount = [79700, 117562, 15399, 7191]
+
+plt.bar(y_pos, amount, align='center', alpha=0.5)
+plt.xticks(y_pos, objects)
+plt.ylabel('Retweets')
+plt.xlabel('Topics')
+plt.title('Amount of Retweets per Topic')
+
+plt.show()
+
+" -------------------------- "
+ 
+objects = ('Black Holes', 'Constellations', 'Aliens', 'Solar Eclipse')
+y_pos = np.arange(len(objects))
+amount = [274611, 538080, 83752, 26886]
+
+plt.bar(y_pos, amount, align='center', alpha=0.5)
+plt.xticks(y_pos, objects)
+plt.ylabel('Favorites')
+plt.xlabel('Topics')
+plt.title('Amount of Favorites per Topic')
+
+plt.show()
+
+" -------------------------- "
+ 
+objects = ('Black Holes', 'Constellations', 'Aliens', 'Solar Eclipse')
+y_pos = np.arange(len(objects))
+amount = [354311, 655642, 99151, 34077]
+
+plt.bar(y_pos, amount, align='center', alpha=0.5)
+plt.xticks(y_pos, objects)
+plt.ylabel('Favorites and Retweets')
+plt.xlabel('Topics')
+plt.title('Combination of Favorites and Retweets per Topic')
+
+plt.show()
+
+" -------------------------- "
+
+# data to plot
+n_groups = 4
+retweets = (79700, 117562, 15399, 7191)
+favorites = (274611, 538080, 83752, 26886)
+
+# create plot
+fig, ax = plt.subplots()
+index = np.arange(n_groups)
+bar_width = 0.35
+opacity = 0.8
+
+rects1 = plt.bar(index, retweets, bar_width,
+alpha=opacity,
+color='b',
+label='Retweets')
+
+rects2 = plt.bar(index + bar_width, favorites, bar_width,
+alpha=opacity,
+color='g',
+label='Likes')
+
+plt.xlabel('Topics')
+plt.ylabel('Amount')
+plt.title('Comparison of Likes and Retweets')
+plt.xticks(index + bar_width, ('Black Holes', 'Constellations', 'Aliens', 'Solar Eclipse'))
+plt.legend()
+
+plt.tight_layout()
+plt.show()
